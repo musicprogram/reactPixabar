@@ -12,9 +12,16 @@ class App extends Component {
   }
 
 
+  consultarApi = ()=> {
+    const url = `https://pixabay.com/api/?key=536032-cb671dc3c54fa28278f649d70&q=${this.state.termino}`
+    console.log(url);
+  }
+
   datosBusqueda = (termino) => {
     this.setState({
       termino
+    },()=>{
+      this.consultarApi()
     })
   }
 
